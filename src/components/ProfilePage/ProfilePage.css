@@ -1,0 +1,119 @@
+.profile-page {
+    position: relative; /* Додаємо позиціонування для контейнера */
+    width: 100%; /* Задаємо ширину */
+    height: 100vh; /* Задаємо висоту */
+  }
+  
+  .profile-image-container {
+    position: absolute; /* Використовуємо абсолютне позиціонування */
+    left: 372px; /* Координата x для зображення */
+    top: 166px; /* Координата y для зображення */
+  }
+  
+  .profile-image {
+    width: 200px; /* Ширина зображення */
+    height: 200px; /* Висота зображення */
+    border-radius: 50%; /* Робимо зображення круглим */
+  }
+  
+  .nickname {
+    position: absolute; /* Використовуємо абсолютне позиціонування для тексту */
+    left: 800px; /* Координата x для тексту */
+    top: 191px; /* Координата y для тексту */
+    font-size: 20px; /* Розмір шрифту */
+    color: #000; /* Колір тексту (можна змінити) */
+  }
+  
+  .numbers-container {
+    position: absolute; /* Використовуємо абсолютне позиціонування для контейнера цифр */
+    left: 720px; /* Зменшуємо координату x для цифр (переміщуємо лівіше) */
+    top: 280px; /* Збільшуємо координату y для цифр (опускаємо нижче) */
+    display: flex; /* Використовуємо flex для вирівнювання цифр */
+  }
+  
+  .number-one,
+  .number-two,
+  .number-three {
+    font-size: 24px; /* Збільшуємо розмір шрифту цифр */
+    color: #000; /* Колір цифр (можна змінити) */
+    margin-right: 60px; /* Відстань між цифрами */
+    display: flex; /* Використовуємо flex для вирівнювання тексту і іконки */
+    align-items: center; /* Вирівнюємо іконку і текст по центру */
+  }
+  
+  .number-three {
+    margin-right: 0; /* Не додаємо відстань для останньої цифри */
+  }
+  
+  .number-one svg,
+  .number-two svg,
+  .number-three svg {
+    margin-right: 10px; /* Відстань між іконкою та цифрою */
+    font-size: 28px; /* Збільшуємо розмір іконок */
+  }
+  
+  /* Стилі для кнопки */
+  .my-books-button {
+    position: absolute; /* Використовуємо абсолютне позиціонування для кнопки */
+    left: 300px; /* Зменшуємо координату x для кнопки (переміщуємо лівіше) */
+    top: 380px; /* Задаємо y, щоб кнопка була під зображенням */
+    width: 356px; /* Ширина кнопки */
+    height: 51px; /* Висота кнопки */
+    background-color: transparent; /* Прозорий фон */
+    border: 2px solid #386230; /* Зелений обвод */
+    border-radius: 5px; /* Закруглені кути кнопки */
+    color: rgb(0, 0, 0); /* Колір тексту */
+    font-size: 18px; /* Розмір шрифту тексту */
+    cursor: pointer; /* Змінюємо курсор на pointer */
+  }
+  
+  /* Стилі для другої кнопки */
+  .second-button {
+    left: 1100px; /* Координата x для другої кнопки */
+    top: 380px; /* Координата y для другої кнопки */
+  }
+  .profile-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px; /* Ширина контейнера */
+    height: 200px; /* Висота контейнера */
+    border-radius: 50%; /* Кругла форма */
+    background-color: #f0f0f0; /* Колір фону, якщо потрібно */
+    border: 2px solid #ccc; /* Зовнішня рамка */
+}
+
+.profile-icon {
+    font-size: 100px; /* Розмір іконки */
+    color: #000; /* Колір іконки */
+    margin-top: -20px; /* Від'ємний верхній відступ для підняття іконки */
+}
+
+.round-button {
+    position: absolute; /* Дозволяє задати конкретні координати */
+    left: 348px; /* Координата X */
+    top: 622px; /* Координата Y */
+    width: 160px; /* Збільшена ширина кнопки */
+    height: 160px; /* Збільшена висота кнопки */
+    border-radius: 50%; /* Округлі краї */
+    background-color: transparent; /* Прозорий фон */
+    border: 2px solid #666; /* Колір обводки */
+    cursor: pointer; /* Курсор при наведенні */
+    transition: background-color 0.3s; /* Анімація для фону */
+    display: flex; /* Використання flex для центрування */
+    justify-content: center; /* Центрування вмісту по горизонталі */
+    align-items: center; /* Центрування вмісту по вертикалі */
+}
+
+.round-button:hover {
+    background-color: rgb(254, 255, 254); /* Колір фону при наведенні */
+    border-color: #386230; /* Колір обводки при наведенні */
+}
+
+.plus-icon {
+    font-size: 60px; /* Розмір плюсика */
+    color: #666; /* Колір іконки */
+}
+
+
+

@@ -1,0 +1,59 @@
+/* src/pages/LoginPage.css */
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    text-align: center;
+  }
+  
+  .continue-button {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #2e4e1e; /* темно-зелений */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .forgot-password {
+    display: block;
+    color: #1a73e8;
+    font-size: 12px;
+    margin: 10px 0;
+    text-decoration: none;
+  }
+  
+  .create-account-button {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  

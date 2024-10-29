@@ -1,5 +1,4 @@
 const path = require('node:path');
-
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -35,6 +34,10 @@ const basicConfig = {
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)$/i, 
+                type: 'asset/resource', 
             },
         ],
     },

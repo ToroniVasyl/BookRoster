@@ -1,0 +1,49 @@
+.homepage {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два стовпці */
+    gap: 20px;
+}
+
+.photo-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 15px;
+    max-width: 250px;
+    word-wrap: break-word;
+}
+
+.nickname {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.description {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}

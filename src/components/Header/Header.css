@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body {
     font-family: 'Instrument Sans', sans-serif;
 }
@@ -43,4 +43,10 @@ body {
 
 .icon {
     font-size: 40px; /* Розмір іконки, можна змінити за потреби */
+}
+
+.menu {
+    display: flex;
+    align-items: center; /* Вирівнює пункти меню по вертикалі */
+    margin-left: 70px;
 }
