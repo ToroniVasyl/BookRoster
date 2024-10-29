@@ -31,7 +31,7 @@ const ProfilePage = () => {
       {/* Перша кнопка */}
       <button className="my-books-button">My Books</button>
       {/* Друга кнопка */}
-      <button className="my-books-button second-button">My Books</button>
+      <button className="my-books-button second-button">My Posts</button>
       {/* Кругла кнопка з плюсиком */}
       <button className="round-button">
         <AiOutlinePlus className="plus-icon" />

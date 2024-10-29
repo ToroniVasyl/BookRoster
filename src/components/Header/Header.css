@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Instrument Sans', sans-serif;
 }
@@ -20,6 +19,12 @@ body {
     font-weight: bold;
     position: relative;
     top: 10px;
+    text-decoration: none; /* Видаляє підкреслення */
+    color: black; /* Задає чорний колір тексту */
+}
+
+.header-title:hover {
+    text-decoration: underline; /* Додає підкреслення при наведенні (необов'язково) */
 }
 
 .header-button {
@@ -38,7 +43,6 @@ body {
 
 .header-button:hover {
     background-color: #218838;
-
 }
 
 .icon {

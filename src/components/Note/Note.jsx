@@ -1,6 +1,8 @@
 import React from "react";
 import { BsBookFill } from "react-icons/bs";
 import './None.css';
+import Header from '../Header/Header'; // Правильний шлях до Header
+import Footer from '../Footer/Footer'; // Правильний шлях до Footer
 
 const Note = () => {
   const [entries, setEntries] = React.useState([]);
@@ -17,6 +19,7 @@ const Note = () => {
 
   return (
     <div className="text-input-page">
+      
       <div className="button-container">
         <button className="add-button" onClick={() => setModalVisible(true)}>
           +
@@ -31,7 +34,7 @@ const Note = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
-          <button  onClick={handleAddNote}>Create</button>
+          <button onClick={handleAddNote}>Create</button>
         </div>
       )}
 
