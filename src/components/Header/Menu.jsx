@@ -1,5 +1,6 @@
+// src/components/Menu.jsx
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom'; // Імпорт useLocation
+import { Link, useLocation } from 'react-router-dom';
 import './Menu.css';
 import { BiCart } from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
@@ -11,7 +12,7 @@ import { BsGear } from 'react-icons/bs';
 
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation(); // Використовуємо useLocation для отримання маршруту
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -19,7 +20,7 @@ const Menu = () => {
 
   useEffect(() => {
     setIsOpen(false); // Закриває меню при зміні маршруту
-  }, [location]); // Відстежуємо зміни маршруту
+  }, [location]);
 
   return (
     <div className="menu">
@@ -35,13 +36,13 @@ const Menu = () => {
           <Link to="/cart" className="menu-button">
             <BiCart className='icons' />
           </Link>
-          <Link to="/profile" className="menu-button">
+          <Link to="/login" className="menu-button"> {/* Зміна на /login */}
             <AiOutlineUser className='icons' />
           </Link>
           <Link to="/hashtags" className="menu-button">
             <FaHashtag className='icons' /><AiFillHeart className='heart' />
           </Link>
-          <Link to="/Note" className="menu-button">
+          <Link to="/note" className="menu-button">
             <AiOutlineFileDone className='icons' />
           </Link>
           <Link to="/settings" className="menu-button">
