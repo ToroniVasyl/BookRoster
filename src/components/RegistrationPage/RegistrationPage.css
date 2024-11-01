@@ -1,0 +1,52 @@
+/* src/pages/RegistrationPage.css */
+
+.registration-container {
+    width: 320px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 2px solid #ccc; 
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    text-align: center;
+  }
+  
+  .terms {
+    display: flex;
+    align-items: flex-start;
+    font-size: 12px;
+    color: #333;
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  .terms input {
+    margin-right: 5px;
+  }
+  
+  .continue-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #2e4e1e; /* Темно-зелений */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

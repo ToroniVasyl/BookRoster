@@ -1,0 +1,56 @@
+body {
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    height: 100px;
+}
+
+.header-title {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+    text-decoration: none; /* Видаляє підкреслення */
+    color: black; /* Задає чорний колір тексту */
+}
+
+.header-title:hover {
+    text-decoration: underline; /* Додає підкреслення при наведенні (необов'язково) */
+}
+
+.header-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 25px;
+    background-color: #386230;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+    background-color: #218838;
+}
+
+.icon {
+    font-size: 40px; /* Розмір іконки, можна змінити за потреби */
+}
+
+.menu {
+    display: flex;
+    align-items: center; /* Вирівнює пункти меню по вертикалі */
+    margin-left: 70px;
+}
