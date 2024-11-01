@@ -2,16 +2,22 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Імпортуємо useNavigate для перенаправлення
 import './RegistrationPage.css';
+import { createUserWithEmailAndPassword } from 'firebase/auth'; 
+import { auth } from '../../firebase'; // Шлях до файлу, де ініціалізований Firebase
 
 const RegistrationPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [email, setEmail] = useState(''); // Ініціалізуємо email
+  const [password, setPassword] = useState(''); // Ініціалізуємо password
+  const [confirmPassword, setConfirmPassword] = useState(''); // Ініціалізуємо confirmPassword
+  const [error, setError] = useState(''); // Додаємо стан для помилок
   const navigate = useNavigate(); // Ініціалізуємо useNavigate
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const register = (e) => { // Виправлено синтаксис функції
+    e.preventDefault();
+    if(password.length < 6) {
+      setError('Password is too short');
+      return
+  }
 
     // Перевірка, чи паролі збігаються
     if (password !== confirmPassword) {
@@ -19,70 +25,60 @@ const RegistrationPage = () => {
       return;
     }
 
-    try {
-      const response = await fetch('https://api.example.com/http://localhost:9000', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username,
-          password,
-          termsAccepted,
-        }),
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((user) => {
+        console.log(user);
+        setEmail("");
+        setPassword("");
+        setConfirmPassword(""); // Додаємо скидання для confirmPassword
+        setError("");
+        navigate('/'); // Перенаправляємо на головну сторінку
+      })
+      .catch((error) => {
+        console.error(error);
+        setError('There was a problem with the registration.'); // Встановлюємо повідомлення про помилку
       });
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      const data = await response.json();
-      console.log(data);
-      
-      
-      navigate('/'); 
-    } catch (error) {
-      console.error('There was a problem with the registration:', error);
-    }
   };
 
   return (
     <div className="registration-container">
       <h2>Registration</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="username"
-          className="input-field"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+      <form onSubmit={register}>
+        <input className='input-field'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          type="email"
+          name="email"
+          required
         />
-        <input
-          type="password"
-          placeholder="password"
-          className="input-field"
+        <input className='input-field'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-        />
-        <input
           type="password"
-          placeholder="again password"
-          className="input-field"
+          name="password"
+          required
+        />
+        <input className='input-field'
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
+          type="password"
+          name="confirmPassword"
+          required
         />
-        <div className="terms">
+        {/* <div className="terms">
           <input
             type="checkbox"
             id="termsCheckbox"
             checked={termsAccepted}
             onChange={(e) => setTermsAccepted(e.target.checked)}
+            required // Робимо обов'язковим для підтвердження
           />
           <label htmlFor="termsCheckbox">
             Реєструючись, ви приймаєте наші Умови, Політику конфіденційності і Політику щодо файлів cookie.
           </label>
-        </div>
+        </div> */}
         <button type="submit" className="continue-button">Continue</button>
+        {error && <p className="error">{error}</p>} {/* Покажемо помилку, якщо вона є */}
       </form>
     </div>
   );
