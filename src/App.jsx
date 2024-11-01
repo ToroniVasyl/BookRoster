@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; 
 import Header from './components/Header/Header';
 import HomePage from './components/HomePage/HomePage';
 import Footer from './components/Footer/Footer';
@@ -11,7 +11,7 @@ import ProfilePage from './components/ProfilePage/ProfilePage';
 const App = () => {
     return (
         <Router>
-            <div data-testid="app"> {/* Додайте data-testid тут */}
+            <div data-testid="app">
                 <Header />
                 <div id="tabs">
                     <div id="tab-content">
@@ -21,7 +21,7 @@ const App = () => {
                             <Route path="/login" element={<LoginPage />} /> {/* Сторінка входу */}
                             <Route path="/register" element={<RegistrationPage />} /> {/* Сторінка реєстрації */}
                             <Route path="/profile" element={<ProfilePage />} /> {/* Сторінка профілю */}
-                            {/* Додайте інші маршрути за потребою */}
+                            <Route path="*" element={<Navigate to="/" replace />} /> {/* Перенаправлення на головну */}
                         </Routes>
                         <Footer /> 
                     </div>
