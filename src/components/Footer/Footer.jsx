@@ -6,21 +6,20 @@ import Inst from '../img/Inst.jpg';
 import Telegram from '../img/Telegram.jpg';
 import TikTok from '../img/TikTok.jpg';
 
- 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-top">
+    <footer data-testid="footer" className="footer">
+      <div className="footer-top" data-testid="footer-top">
         <h2>Download our apps</h2>
       </div>
-      <div className="footer-content">
-        <div className="social-media">
+      <div className="footer-content" data-testid="footer-content">
+        <div className="social-media" data-testid="social-media">
           <img src={Inst} alt="Instagram" />
           <img src={Telegram} alt="Telegram" />
           <img src={Facebook} alt="Facebook" />
           <img src={TikTok} alt="TikTok" />
         </div>
-        <div className="footer-links">
+        <div className="footer-links" data-testid="footer-links">
           <div>
             <h3>Інформація про компанію</h3>
             <a href="/about-us">Про нас</a>
@@ -35,7 +34,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer-bottom">
+      <div className="footer-bottom" data-testid="footer-bottom">
         <p>BookRoster 2024</p>
       </div>
     </footer>

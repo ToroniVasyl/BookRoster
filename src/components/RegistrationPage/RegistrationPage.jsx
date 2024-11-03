@@ -1,18 +1,18 @@
 // src/pages/RegistrationPage.jsx
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Імпортуємо useNavigate для перенаправлення
+import { useNavigate } from 'react-router-dom'; 
 import './RegistrationPage.css';
 import { createUserWithEmailAndPassword } from 'firebase/auth'; 
-import { auth } from '../../firebase'; // Шлях до файлу, де ініціалізований Firebase
+import { auth } from '../../firebase'; 
 
 const RegistrationPage = () => {
-  const [email, setEmail] = useState(''); // Ініціалізуємо email
-  const [password, setPassword] = useState(''); // Ініціалізуємо password
-  const [confirmPassword, setConfirmPassword] = useState(''); // Ініціалізуємо confirmPassword
-  const [error, setError] = useState(''); // Додаємо стан для помилок
-  const navigate = useNavigate(); // Ініціалізуємо useNavigate
+  const [email, setEmail] = useState(''); 
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState(''); 
+  const [error, setError] = useState(''); 
+  const navigate = useNavigate(); 
 
-  const register = (e) => { // Виправлено синтаксис функції
+  const register = (e) => { 
     e.preventDefault();
     if(password.length < 6) {
       setError('Password is too short');
@@ -30,13 +30,13 @@ const RegistrationPage = () => {
         console.log(user);
         setEmail("");
         setPassword("");
-        setConfirmPassword(""); // Додаємо скидання для confirmPassword
+        setConfirmPassword(""); 
         setError("");
-        navigate('/'); // Перенаправляємо на головну сторінку
+        navigate('/'); 
       })
       .catch((error) => {
         console.error(error);
-        setError('There was a problem with the registration.'); // Встановлюємо повідомлення про помилку
+        setError('There was a problem with the registration.'); 
       });
   };
 
@@ -81,7 +81,7 @@ const RegistrationPage = () => {
           </label>
         </div> */}
         <button type="submit" className="continue-button">Continue</button>
-        {error && <p className="error">{error}</p>} {/* Покажемо помилку, якщо вона є */}
+        {error && <p className="error">{error}</p>} 
       </form>
     </div>
   );

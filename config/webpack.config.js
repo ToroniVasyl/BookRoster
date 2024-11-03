@@ -33,7 +33,7 @@ const basicConfig = {
             },
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                use: ['style-loader', 'css-loader'], // Для звичайного CSS
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg)$/i, 

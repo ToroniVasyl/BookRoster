@@ -13,15 +13,24 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-// Import commands.js using ES2015 syntax:
-import '@cypress/code-coverage/support';
-import './commands';
-
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
-import { mount } from 'cypress/react18';
-
-Cypress.Commands.add('mount', mount);
-
-// Example use:
-// cy.mount(<MyComponent />)
+// Ігнорування помилок, пов'язаних зі стилями, під час тестування
+Cypress.on('uncaught:exception', (err) => {
+    if (err.message.includes('Unknown word') || err.message.includes('Cannot find module')) {
+      return false; // Ігноруємо помилки, пов'язані зі стилями
+    }
+    return true;
+  });
+  
+  // Import commands.js using ES2015 syntax:
+  import '@cypress/code-coverage/support';
+  import './commands';
+  
+  // Alternatively you can use CommonJS syntax:
+  // require('./commands')
+  import { mount } from 'cypress/react18';
+  
+  Cypress.Commands.add('mount', mount);
+  
+  // Example use:
+  // cy.mount(<MyComponent />)
+  

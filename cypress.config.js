@@ -30,7 +30,6 @@ module.exports = defineConfig({
         baseUrl: 'http://localhost:9000',
         specPattern: 'cypress/e2e/**/*.cy.{js,jsx}',
         setupNodeEvents(on, config) {
-            // Додаткові налаштування для e2e тестів, якщо потрібно
             return config;
         },
     },
