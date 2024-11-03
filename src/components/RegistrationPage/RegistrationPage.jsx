@@ -45,6 +45,7 @@ const RegistrationPage = () => {
       <h2>Registration</h2>
       <form onSubmit={register}>
         <input className='input-field'
+        placeholder='Email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           type="email"
@@ -52,6 +53,7 @@ const RegistrationPage = () => {
           required
         />
         <input className='input-field'
+        placeholder='password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           type="password"
@@ -59,6 +61,7 @@ const RegistrationPage = () => {
           required
         />
         <input className='input-field'
+        placeholder='password again'
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           type="password"

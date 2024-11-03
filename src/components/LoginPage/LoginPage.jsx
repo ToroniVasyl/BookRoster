@@ -1,6 +1,6 @@
 // src/pages/LoginPage.jsx
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Імпорт useNavigate
+import { Link,useNavigate } from 'react-router-dom'; 
 import './LoginPage.css';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase';
@@ -34,8 +34,9 @@ const LoginPage = () => {
       <button onClick={logIn} className="continue-button">Continue</button>
       {error ? <p id={styles.error}>{error}</p> : ""}
       <a href="#" className="forgot-password">Forgot your password?</a>
-      <button className="create-account-button" >create a new account</button> {/* Додано onClick */}
-
+      <Link to ="/register">
+      <button className="create-account-button" >create a new account</button> 
+      </Link>
     </div>
   );
 };

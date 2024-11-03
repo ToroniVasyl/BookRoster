@@ -9,9 +9,9 @@ import {getAuth} from "firebase/auth";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCK8HsKQCNVvv_oNcTsSixgl2ZDLa1OypY",
-  authDomain: "bookroster1-80528.firebaseapp.com",
-  projectId: "bookroster1-80528",
-  storageBucket: "bookroster1-80528.firebasestorage.app",
+  authDomain: "bookroster-80528.firebaseapp.com",
+  projectId: "bookroster-80528",
+  storageBucket: "bookroster-80528.firebasestorage.app",
   messagingSenderId: "456764403413",
   appId: "1:456764403413:web:6725352b192f7436cbbc5c",
   measurementId: "G-G7F07VHKYE"
